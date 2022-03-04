@@ -11,7 +11,7 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`
+- `[10] === [10]`//false because its different
 - What is the value of obj? // answer { surname: 'Stark' }. reason - value are reassigned.
 - `obj == newObj`// false reason - value is different of those variable.
 - `obj === newObj`//false reason - all the variable address are different.
