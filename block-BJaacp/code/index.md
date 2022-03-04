@@ -12,18 +12,18 @@ let arr2 = arr;
 Answer the following with reason after going through the above code:
 
 - `[10] === [10]`
-- What is the value of obj? // answer
-- `obj == newObj`
-- `obj === newObj`
-- `user === newObj`
-- `user == newObj`
-- `user == obj`
-- `arr == arr2`
-- `arr === arr2`
+- What is the value of obj? // answer { surname: 'Stark' }. reason - value are reassigned.
+- `obj == newObj`// false reason - value is different of those variable.
+- `obj === newObj`//false reason - all the variable address are different.
+- `user === newObj`//false reason - all the variable address are different.
+- `user == newObj`//false reason - user stores the value of obj and the other hand newObj stores the differenct value.
+- `user == obj`//true reason - user stores the value of obj.
+- `arr == arr2`//true reason - arr2 stores the value of arr.
+- `arr === arr2`//true reason - all variables data type is string.
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
-<!-- To add this image here use ![name](./hello.jpg) -->
+<!-- To add this image here use ![name](./hello.jpg) --> 
 
 ```js
 function personDetails(person) {
@@ -33,19 +33,19 @@ function personDetails(person) {
 }
 var person1 = { name: 'Alex', age: 30 };
 var person2 = personDetails(person1);
-console.log(person1);
-console.log(person2);
+console.log(person1);// {name: 'Alex', age: 25} reason - 
+console.log(person2);// {name: 'John', age: 50}
 ```
 
 3. What will be the output of the below code:
 
 ```js
 var brothers = ['Bran', 'John'];
-var user = {
+var users = {
   name: 'Sansa',
 };
-user.brothers = brothers;
+users.brothers = brothers;
 brothers.push('Robb');
-console.log(user.brothers === brothers); //1. output
-console.log(user.brothers.length === brothers.length); //2. output
+console.log(users.brothers === brothers); //1. output true 
+console.log(users.brothers.length === brothers.length); //2. output true
 ```
