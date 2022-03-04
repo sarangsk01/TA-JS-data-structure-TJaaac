@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true. reason - newUser stores the value of user.
+- `user === newUser;`// true. reason - all those variable are same data type that is string.
+- `user.name === newUser.name;`// true. reason - all those variable are same data type that is string.
+- `user.name == newUser.name;`// true. reason - newUser.name stores the value of user.name
+- `user.sibling == newUser.sibling;`// true. reason - newUser.sibling stores the value of user.sibling
+- `user.sibling === newUser.sibling;`//  true. reason - all those variable are same data type that is string.
+- `user.sibling == allBrothers;`// false. reason - user.sibling is an key object and allBrothers is an array.
+- `user.sibling === allBrothers;`// false. reason - user.sibling is an key object and allBrothers is an array.
+- `brothersCopy === allBrothers;`// false. reason - all variable is different data type.
+- `brothersCopy == allBrothers;`// false. reason - brothersCopy stores the value of user.sibling that is object key and the other hand allBrothers is an array. 
+- `brothersCopy == user.sibling;`// true. reason - brothersCopy stores the value of user.sibling.
+- `brothersCopy === user.sibling;`// true. reason - all those variable are same data type that is string.
+- `brothersCopy[0] === user.sibling[0];`// true. not primitive always done copy by reference address gets copied so both the value has changed.and its data type is also same that is string.
+- `brothersCopy[1] === user.sibling[1];`// true. not primitive always done copy by reference address gets copied so both the value has changed.
+- `user.sibling[1] === newUser.sibling[1];`// true. not primitive always done copy by reference address gets copied so both the value has changed.and its data type is also same that is string.
