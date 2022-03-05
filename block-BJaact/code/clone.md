@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output arya person2 stores the value of person.
+console.log(person.firstName); // output arya reassigned the value
+console.log(person.lastName); // output Doe person.lastname contains a value of Doe.
+console.log(person == person2); // output true because person2 is copied by value
+console.log(person === person2); // output true all those variable has string.
+console.log(person.lastName === person2.lastName); // output true all those variable has string.
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output John person2 stores the value of person.
+console.log(person.firstName); // output Arya reassigned the value
+console.log(personTwo.lastName); // output Doe person.lastname contains a value of Doe.
+console.log(person.firstName === personTwo.firstName); // output false all those variable has differenct value stored in key.
+console.log(person == personTwo); // output false all those variable have a differennt addresses.
+console.log(person === personTwo); // output false personTwo has contains cloned value. 
+console.log(person.address === personTwo.address); // output true all variable contains object.
+console.log(person.address == personTwo.address); // output true all key value are same.
+console.log(personTwo.address.city); // output San Jose its copied by reference.
+console.log(person.address.city); // output San Jose The value is defined in a key of this object.
+console.log(person.address.city == personTwo.address.city); // output true all the values are same.
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output John person2 stores the value of person.
+console.log(person.firstName); // output Arya reassigned the value
+console.log(personTwo.lastName); // output Doe person.lastname contains a value of Doe.
+console.log(person.firstName === personTwo.firstName); // output false all those variable has differenct value stored in key.
+console.log(person == personTwo); // output false all those variable have a differennt addresses.
+console.log(person === personTwo); // output false personTwo has contains cloned value. 
+console.log(person.address === personTwo.address); // output false personTwo has contains cloned value.  
+console.log(person.address == personTwo.address); // output false all those variable has different addresses.
+console.log(personTwo.address.city); // output San Jose its copied by reference.
+console.log(person.address.city); // output San Jose The value is defined in a key of this object.
+console.log(person.address.city == personTwo.address.city); // output true all the values are same.
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -103,7 +103,7 @@ let blogs = [
   },
 ];
 
-// Your code goes here
+ let clonedBlogs = {...blogs}; 
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -128,7 +128,7 @@ var questions = [
   },
 ];
 
-// Your code goes here
+let questionCLone = {...question};
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -155,7 +155,7 @@ var allBlogs = {
   ],
 };
 
-// Your code goes here
+let allBlogsClone = {...allBlogs};
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -188,14 +188,14 @@ let person = [
   },
 ];
 
-// Your code goes here
+let clonedPerson = {...person};
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
 function cloneObject() {
-  // your code
+  return {...user,...person};
 }
 
 // Run the test below to check your function
