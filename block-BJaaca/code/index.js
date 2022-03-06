@@ -19,7 +19,7 @@ character["sur name"] = "Stark";
 
 // - Add a new key `title` with the value title of the character i.e "Lady of Winterfell"
 
-character.title = "Lady of Winterfell";
+character.title = "Lady of Winterfall";
 // - Add another property named `greet` and value should be a function when called should alert `I am [NAME HERE] and my title is [TITLE HERE]`.
 character.greet = function() {
         alert(`I am ${character.characterName} and my title is ${character.title}`);
